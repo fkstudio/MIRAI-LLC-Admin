@@ -1983,16 +1983,15 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
+  height: 40px;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
+  background-color: white;
   background-clip: padding-box;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border-radius: 6px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -9958,6 +9957,12 @@ a {
   }
 }
 
+.error-message {
+  color: #FA023B;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .side-nav {
   width: 100%;
   min-height: 100vh;
@@ -10101,6 +10106,49 @@ a {
   font-size: 21px;
   font-weight: 900;
   color: #174A84;
+}
+
+.login {
+  background-color: #103C6E;
+  border-radius: 21px;
+  padding: 38px 25px;
+  min-width: 390px;
+}
+.login .login-header {
+  text-align: center;
+}
+.login .login-header h6 {
+  font-size: 17;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+.login figure img {
+  width: 200px;
+}
+.login label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: white;
+}
+.login .form-group {
+  margin-bottom: 30px;
+}
+.login button {
+  background-color: #7FC520;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  width: 100%;
+  border: 0px;
+  border-radius: 8px;
+  height: 50px;
+}
+@media (max-width: 575.98px) {
+  .login {
+    min-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

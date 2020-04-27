@@ -18,6 +18,12 @@ a {
     }
 }
 
+.error-message {
+    color: $custom-danger;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .side-nav {
     width: 100%;
     min-height: 100vh;
@@ -180,5 +186,55 @@ a {
         font-size: 21px;
         font-weight: 900;
         color: $custom-primary;
+    }
+}
+
+.login {
+    background-color: #103C6E;
+    border-radius: 21px;
+    padding: 38px 25px;
+    min-width: 390px;
+
+    .login-header {
+        text-align: center;
+
+        h6 {
+            font-size: 17;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+        }
+    }
+
+    figure {
+        img {
+            width: 200px;
+        }
+    }
+
+    label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: white;
+    }
+
+    .form-group {
+        margin-bottom: 30px;
+    }
+
+    button {
+        background-color: $custom-secondary;
+        text-align: center;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        width: 100%;
+        border: 0px;
+        border-radius: 8px;
+        height: 50px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        min-width: 100%;
     }
 }
