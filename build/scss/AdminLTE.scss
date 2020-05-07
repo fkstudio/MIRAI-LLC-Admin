@@ -23,3 +23,271 @@
 @import 'parts/miscellaneous';
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+
+.section-title {
+
+    h2 {
+        color: $primary;
+        font-size: 28px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        margin-bottom: 0px;
+    }
+}
+
+.filter-id {
+    margin-top: 10px;
+
+    form {
+
+        .row {
+            margin-left: 0px;
+            margin-right: 0px;
+            align-items: center;
+        }
+
+        label {
+            color: $primary;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            min-width: 140px;
+            margin-bottom: 0px;
+        }
+
+        .form-control {
+            text-align: center;
+            height: auto;
+            padding: 0px;
+        }
+    }
+}
+
+.filter-users {
+    display: flex;
+    align-items: center;
+
+    .show-rows {
+
+        .form-group {
+            display: flex;
+            margin-bottom: 0px;
+
+            label {
+                margin-bottom: 0px;
+                font-family: 'Lato', sans-serif;
+                font-size: 19px;
+                color: #918484;
+                font-weight: 400;
+            }
+
+            label:nth-child(1) {
+                margin-right: 4px;
+            }
+
+            label:nth-child(3) {
+                margin-left: 4px;
+            }
+
+            .form-control {
+                width: 45px;
+                height: 25px;
+                background-color: #000000;
+                opacity: 30%;
+                color: white;
+                text-align: center;
+                border: 0px;
+            }
+        }
+    }
+
+    .action-user {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 3px;
+
+        a.btn {
+            padding: 0;
+            width: 45px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            i {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+        }
+
+        a:nth-child(1) {
+            margin-right: 10px;
+        }
+    }
+}
+
+.users-table {
+    margin-top: 15px;
+ 
+    table.table {
+        overflow: auto;
+        position: relative;
+
+        thead {
+            background-color: $primary;
+
+            tr.table-title {
+                background-color: #EBEBEB;
+
+                th {
+                    color: $primary;
+                    font-size: 14px;
+                    font-family: 'Lato', sans-serif;
+                }
+            }
+
+            tr {
+                display: flex;
+                align-items: center;
+                border: 0px;
+                height: 35px;
+
+                th {
+                    padding: 0px;
+                    margin: 0px;
+                    width: 250px;
+                    display: block;
+                    font-size: 14px;
+                    color: white;
+                    font-weight: bold;
+                    font-family: 'Lato', sans-serif;
+                    border: 0px;
+                    padding-left: 10px;
+                }
+
+                th:first-child {
+                    width: 150px;
+                }
+
+                th:nth-child(2) {
+                    width: 80px;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                display: flex;
+                border-right: 1px solid #A5C9FF;
+
+                td {
+                    display: flex;
+                    align-items: center;
+                    height: 35px;
+                    padding: 0px;
+                    margin: 0px;
+                    width: 250px;
+
+
+                    padding-left: 10px;
+                    border: 1px solid #A5C9FF;
+                    border-bottom: 0px;
+                    border-right: 0px;
+                    font-family: 'Lato', sans-serif;
+                    font-size: 14px;
+                }
+
+                td:first-child {
+                    width: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .radio {
+                        display: block;
+                        cursor: pointer;
+                        margin-bottom: 5px;
+                        margin-top: 0px;
+
+                        input {
+                            display: none;
+                            & + span {
+                                padding-left: 35px;
+                                display: flex;
+                                align-items: center;
+                                position: relative;
+                                color: #000000;
+                                font-size: 14px;
+                                font-weight: 500;
+
+                                &:before,
+                                &:after {
+                                    content: '';
+                                    width: 30px;
+                                    height: 30px;
+                                    display: block;
+                                    border-radius: 3px;
+                                    left: 0;
+                                    top: -6px;
+                                    position: absolute;
+                                }
+
+                                //cuadro
+                                &:before {
+                                    content: "\f0c8";
+                                    font-family: "Font Awesome 5 Free";
+                                    font-size: 15px;
+                                }
+                                //cuando selecciona
+                                &:after {
+                                    display: none;
+                                    color: green;
+                                    content: "\f14a";
+                                    font-family: "Font Awesome 5 Free";
+                                    font-size: 15px;
+                                }
+                            }
+                            //seleccionado
+                            &:checked + span {
+                    
+                                &:before {
+                                    display: none;
+                                }
+                    
+                                &:after {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+
+                    .btn {
+                        padding: 0px;
+                        width: 45px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            color: white;
+                            font-size: 16px;
+                            margin-left: 6px;
+                        }
+                    }
+                }
+
+                td:nth-child(2) {
+                    width: 80px;
+                }
+
+            }
+
+            tr:last-child {
+                border-bottom: 1px solid #A5C9FF;
+            }
+        }
+    }
+}

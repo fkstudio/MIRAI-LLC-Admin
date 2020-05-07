@@ -21,15 +21,24 @@
   height: calc(100% - (#{$main-header-height-inner} + #{$main-header-bottom-border-width}));
   overflow-y: auto;
   padding-bottom: $sidebar-padding-y;
-  padding-left: $sidebar-padding-x;
+  padding-left: 0px;
   padding-right: $sidebar-padding-x;
   padding-top: 40px;
+  a.nav-link {
+    i {
+      color: white;
+    }
+  }
+
+  .os-content {
+    padding-left: 0px !important;
+  }
 }
 
 // Sidebar user panel
 .user-panel {
   position: relative;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid rgba(251, 253, 255, 0.379);
 
   &,
   .info {
@@ -79,17 +88,39 @@
   // All levels
   .nav-item {
     > .nav-link {
-      margin-bottom: .2rem;
       font-family: 'Lato', sans-serif;
+      border-radius: 0px;
+      padding: 0;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      position: relative;
       .right {
         @include transition(transform $transition-fn $transition-speed);
       }
     }
-  }
 
-  .nav-link {
-    &:hover {
-      color: #7FC520;
+    &:hover,
+    &.active,
+    &.menu-open {
+      >.nav-link {
+        color: #7FC520;
+        
+        i {
+          color: #7FC520;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          background-color: #7FC520;
+        }
+      }
     }
   }
 
@@ -125,6 +156,7 @@
   // First Level
   > .nav-item {
     margin-bottom: 0;
+    border-radius: 0px;
 
     .nav-icon {
       margin-left: .05rem;
@@ -196,12 +228,6 @@
 
     &:not(:first-of-type) {
       padding: 1.7rem 1rem .5rem;
-    }
-  }
-  
-  .nav-item {
-    &:hover {
-      color: #7FC520 !important;
     }
   }
 
