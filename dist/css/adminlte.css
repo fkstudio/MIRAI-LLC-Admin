@@ -11952,6 +11952,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 .nav-sidebar .nav-treeview > .nav-item > .nav-link {
   padding-left: 38px;
   font-size: 12px;
+  height: 40px;
 }
 
 .nav-sidebar .nav-treeview > .nav-item > .nav-link > .nav-icon {
