@@ -22,8 +22,9 @@
   overflow-y: auto;
   padding-bottom: $sidebar-padding-y;
   padding-left: 0px;
-  padding-right: $sidebar-padding-x;
+  padding-right: 0px;
   padding-top: 40px;
+  
   a.nav-link {
     i {
       color: white;
@@ -87,6 +88,7 @@
 .nav-sidebar {
   // All levels
   .nav-item {
+
     > .nav-link {
       font-family: 'Lato', sans-serif;
       font-size: 12px;
@@ -97,16 +99,18 @@
       align-items: center;
       padding-left: 10px;
       position: relative;
+      color: white;
       .right {
         @include transition(transform $transition-fn $transition-speed);
       }
+
     }
 
     &:hover,
     &.active,
     &.menu-open {
       >.nav-link {
-        color: #7FC520;
+        color: #7FC520 !important;
         
         i {
           color: #7FC520;
@@ -121,6 +125,7 @@
           height: 100%;
           background-color: #7FC520;
         }
+        background-color: #103C6E !important;
       }
     }
   }
@@ -129,7 +134,7 @@
   .nav-link > p > .right {
     position: absolute;
     right: 1rem;
-    top: .7rem;
+    top: 20px;
 
     i,
     span {
@@ -148,6 +153,7 @@
 
     > .nav-link {
       color: #7FC520;
+
       i.right {
         @include rotate(90deg);
       }
@@ -179,6 +185,7 @@
     .float-right {
       margin-top: 3px;
     }
+
   }
 
   // Tree view menu
@@ -192,8 +199,13 @@
         padding-left: 38px;
         font-size: 12px;
         height: 40px;
+
         > .nav-icon {
           width: $sidebar-nav-icon-width;
+        }
+
+        &:hover {
+          background-color: #103C6E;
         }
       }
     }

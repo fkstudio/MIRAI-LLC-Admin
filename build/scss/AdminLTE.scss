@@ -130,11 +130,18 @@
 
 .users-table {
     margin-top: 15px;
- 
+    padding-bottom: 15px;
+
+    .table-responsive {
+        border: 1px solid #A5C9FF;
+    }
+
     table.table {
         overflow: auto;
         position: relative;
-
+        background-color: white;
+        margin-bottom: 0px;
+        
         thead {
             background-color: $primary;
 
@@ -178,9 +185,14 @@
         }
 
         tbody {
+            height: 400px;
+            // border: 1px solid #A5C9FF;
+            overflow: auto;
+            display: block;
+
             tr {
                 display: flex;
-                border-right: 1px solid #A5C9FF;
+                // border-right: 1px solid #A5C9FF;
 
                 td {
                     display: flex;
@@ -189,12 +201,8 @@
                     padding: 0px;
                     margin: 0px;
                     width: 250px;
-
-
                     padding-left: 10px;
                     border: 1px solid #A5C9FF;
-                    border-bottom: 0px;
-                    border-right: 0px;
                     font-family: 'Lato', sans-serif;
                     font-size: 14px;
                 }
@@ -285,8 +293,81 @@
 
             }
 
-            tr:last-child {
-                border-bottom: 1px solid #A5C9FF;
+            @include media-breakpoint-down(md) {
+                height: 250px;
+            }
+
+        }
+    }
+
+    .consignee-table {
+        table.table {
+            border: 0px;
+
+            thead {
+                th:nth-child(2) {
+                    width: 250px;
+                }
+            }
+
+            tbody {
+                td:nth-child(2) {
+                    width: 250px;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+//when menu its close
+.sidebar-collapse {
+    .main-sidebar {
+
+        .sidebar {
+            padding-right: 0px;
+            .nav-sidebar {
+                .nav-item > .nav-link {
+                    justify-content: center;
+                    padding-left: 0;
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &:hover,&.sidebar-focused {
+            .sidebar {
+                .nav-sidebar {
+                    .nav-item > .nav-link {
+                        justify-content: flex-start;
+                        padding-left: 10px;
+
+                        p {
+                            display: block;
+                        }
+                        
+                    }
+
+                    // Tree view menu
+                    .nav-treeview {
+                        > .nav-item {
+                        > .nav-link {
+                            padding-left: 38px;
+                            font-size: 12px;
+                            height: 40px;
+                            > .nav-icon {
+                            width: $sidebar-nav-icon-width;
+                            }
+                        }
+                        }
+                    }
+                }
+    
             }
         }
     }

@@ -11786,7 +11786,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
   overflow-y: auto;
   padding-bottom: 0;
   padding-left: 0px;
-  padding-right: 0.5rem;
+  padding-right: 0px;
   padding-top: 40px;
 }
 
@@ -11858,6 +11858,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
   align-items: center;
   padding-left: 10px;
   position: relative;
+  color: white;
 }
 
 .nav-sidebar .nav-item > .nav-link .right {
@@ -11873,7 +11874,8 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 }
 
 .nav-sidebar .nav-item:hover > .nav-link, .nav-sidebar .nav-item.active > .nav-link, .nav-sidebar .nav-item.menu-open > .nav-link {
-  color: #7FC520;
+  color: #7FC520 !important;
+  background-color: #103C6E !important;
 }
 
 .nav-sidebar .nav-item:hover > .nav-link i, .nav-sidebar .nav-item.active > .nav-link i, .nav-sidebar .nav-item.menu-open > .nav-link i {
@@ -11894,7 +11896,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 .nav-sidebar .nav-link > p > .right {
   position: absolute;
   right: 1rem;
-  top: .7rem;
+  top: 20px;
 }
 
 .nav-sidebar .nav-link > .right i,
@@ -11957,6 +11959,10 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini) .main-header::bef
 
 .nav-sidebar .nav-treeview > .nav-item > .nav-link > .nav-icon {
   width: 1.6rem;
+}
+
+.nav-sidebar .nav-treeview > .nav-item > .nav-link:hover {
+  background-color: #103C6E;
 }
 
 .nav-sidebar.nav-child-indent .nav-treeview {
@@ -30847,11 +30853,18 @@ a.text-muted:hover {
 
 .users-table {
   margin-top: 15px;
+  padding-bottom: 15px;
+}
+
+.users-table .table-responsive {
+  border: 1px solid #A5C9FF;
 }
 
 .users-table table.table {
   overflow: auto;
   position: relative;
+  background-color: white;
+  margin-bottom: 0px;
 }
 
 .users-table table.table thead {
@@ -30898,10 +30911,15 @@ a.text-muted:hover {
   width: 80px;
 }
 
+.users-table table.table tbody {
+  height: 400px;
+  overflow: auto;
+  display: block;
+}
+
 .users-table table.table tbody tr {
   display: -ms-flexbox;
   display: flex;
-  border-right: 1px solid #A5C9FF;
 }
 
 .users-table table.table tbody tr td {
@@ -30915,8 +30933,6 @@ a.text-muted:hover {
   width: 250px;
   padding-left: 10px;
   border: 1px solid #A5C9FF;
-  border-bottom: 0px;
-  border-right: 0px;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 }
@@ -31009,7 +31025,61 @@ a.text-muted:hover {
   width: 80px;
 }
 
-.users-table table.table tbody tr:last-child {
-  border-bottom: 1px solid #A5C9FF;
+@media (max-width: 991.98px) {
+  .users-table table.table tbody {
+    height: 250px;
+  }
+}
+
+.users-table .consignee-table table.table {
+  border: 0px;
+}
+
+.users-table .consignee-table table.table thead th:nth-child(2) {
+  width: 250px;
+}
+
+.users-table .consignee-table table.table tbody td:nth-child(2) {
+  width: 250px;
+}
+
+@media (max-width: 991.98px) {
+  .users-table .consignee-table {
+    margin-bottom: 10px;
+  }
+}
+
+.sidebar-collapse .main-sidebar .sidebar {
+  padding-right: 0px;
+}
+
+.sidebar-collapse .main-sidebar .sidebar .nav-sidebar .nav-item > .nav-link {
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.sidebar-collapse .main-sidebar .sidebar .nav-sidebar .nav-item > .nav-link p {
+  display: none;
+}
+
+.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-item > .nav-link, .sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-item > .nav-link {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-item > .nav-link p, .sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-item > .nav-link p {
+  display: block;
+}
+
+.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-treeview > .nav-item > .nav-link, .sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-treeview > .nav-item > .nav-link {
+  padding-left: 38px;
+  font-size: 12px;
+  height: 40px;
+}
+
+.sidebar-collapse .main-sidebar:hover .sidebar .nav-sidebar .nav-treeview > .nav-item > .nav-link > .nav-icon, .sidebar-collapse .main-sidebar.sidebar-focused .sidebar .nav-sidebar .nav-treeview > .nav-item > .nav-link > .nav-icon {
+  width: 1.6rem;
 }
 /*# sourceMappingURL=adminlte.css.map */
