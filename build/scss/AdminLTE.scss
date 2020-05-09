@@ -24,7 +24,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-
+//components
 .section-title {
 
     h2 {
@@ -128,20 +128,27 @@
     }
 }
 
+.content-wrapper {
+    background-color: white;
+}
+
 .users-table {
     margin-top: 15px;
-    padding-bottom: 15px;
+    // padding-bottom: 15px;
+    border: 1px solid rgba(208, 212, 216, 0.359);
+    position: relative;
+    overflow: auto;
+    width: 100%;
 
-    .table-responsive {
-        border: 1px solid #A5C9FF;
-    }
 
     table.table {
-        overflow: auto;
+        width: 100%;
         position: relative;
         background-color: white;
         margin-bottom: 0px;
-        
+        overflow-x: scroll;
+        white-space: nowrap;
+
         thead {
             background-color: $primary;
 
@@ -156,148 +163,46 @@
             }
 
             tr {
-                display: flex;
-                align-items: center;
                 border: 0px;
-                height: 35px;
+                // height: 35px;
 
                 th {
-                    padding: 0px;
-                    margin: 0px;
-                    width: 250px;
-                    display: block;
-                    font-size: 14px;
                     color: white;
                     font-weight: bold;
-                    font-family: 'Lato', sans-serif;
                     border: 0px;
-                    padding-left: 10px;
+                    vertical-align: middle;
+                    text-transform: capitalize;
                 }
 
-                th:first-child {
-                    width: 150px;
-                }
-
-                th:nth-child(2) {
-                    width: 80px;
-                }
             }
+
         }
 
         tbody {
-            height: 400px;
-            // border: 1px solid #A5C9FF;
-            overflow: auto;
-            display: block;
 
-            tr {
-                display: flex;
-                // border-right: 1px solid #A5C9FF;
-
-                td {
-                    display: flex;
-                    align-items: center;
-                    height: 35px;
-                    padding: 0px;
-                    margin: 0px;
-                    width: 250px;
-                    padding-left: 10px;
-                    border: 1px solid #A5C9FF;
-                    font-family: 'Lato', sans-serif;
-                    font-size: 14px;
-                }
-
-                td:first-child {
-                    width: 150px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    .radio {
-                        display: block;
-                        cursor: pointer;
-                        margin-bottom: 5px;
-                        margin-top: 0px;
-
-                        input {
-                            display: none;
-                            & + span {
-                                padding-left: 35px;
-                                display: flex;
-                                align-items: center;
-                                position: relative;
-                                color: #000000;
-                                font-size: 14px;
-                                font-weight: 500;
-
-                                &:before,
-                                &:after {
-                                    content: '';
-                                    width: 30px;
-                                    height: 30px;
-                                    display: block;
-                                    border-radius: 3px;
-                                    left: 0;
-                                    top: -6px;
-                                    position: absolute;
-                                }
-
-                                //cuadro
-                                &:before {
-                                    content: "\f0c8";
-                                    font-family: "Font Awesome 5 Free";
-                                    font-size: 15px;
-                                }
-                                //cuando selecciona
-                                &:after {
-                                    display: none;
-                                    color: green;
-                                    content: "\f14a";
-                                    font-family: "Font Awesome 5 Free";
-                                    font-size: 15px;
-                                }
-                            }
-                            //seleccionado
-                            &:checked + span {
-                    
-                                &:before {
-                                    display: none;
-                                }
-                    
-                                &:after {
-                                    display: block;
-                                }
-                            }
-                        }
-                    }
-
-                    .btn {
-                        padding: 0px;
-                        width: 45px;
-                        height: 25px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        i {
-                            color: white;
-                            font-size: 16px;
-                            margin-left: 6px;
-                        }
-                    }
-                }
-
-                td:nth-child(2) {
-                    width: 80px;
-                }
-
+            td {
+                border: 1px solid #A5C9FF;
+                vertical-align: middle;
             }
-
+            
             @include media-breakpoint-down(md) {
                 height: 250px;
             }
 
         }
+
+        th, td {
+            padding: 5px;
+            min-width: 130px;
+            max-width: 200px;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+        }
+
+        tr {
+            white-space: initial;
+        }
+
     }
 
     .consignee-table {
@@ -326,7 +231,6 @@
 //when menu its close
 .sidebar-collapse {
     .main-sidebar {
-
         .sidebar {
             padding-right: 0px;
             .nav-sidebar {
