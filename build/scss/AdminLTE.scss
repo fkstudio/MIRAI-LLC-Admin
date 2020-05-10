@@ -36,34 +36,6 @@
     }
 }
 
-.filter-id {
-    margin-top: 10px;
-
-    form {
-
-        .row {
-            margin-left: 0px;
-            margin-right: 0px;
-            align-items: center;
-        }
-
-        label {
-            color: $primary;
-            font-family: 'Lato', sans-serif;
-            font-size: 14px;
-            font-weight: 400;
-            min-width: 140px;
-            margin-bottom: 0px;
-        }
-
-        .form-control {
-            text-align: center;
-            height: auto;
-            padding: 0px;
-        }
-    }
-}
-
 .filter-users {
     display: flex;
     align-items: center;
@@ -91,13 +63,13 @@
             }
 
             .form-control {
-                width: 45px;
+                width: 50px;
                 height: 25px;
-                background-color: #000000;
-                opacity: 30%;
+                background-color: #B3B3B3;
                 color: white;
                 text-align: center;
                 border: 0px;
+                padding: 0px;
             }
         }
     }
@@ -134,7 +106,7 @@
 }
 
 .users-table {
-    border: 1px solid rgba(208, 212, 216, 0.359);
+    // border: 1px solid rgba(208, 212, 216, 0.359);
     position: relative;
     overflow: auto;
     width: 100%;
@@ -143,13 +115,15 @@
     table.table {
         width: 100%;
         position: relative;
+        border: 1px solid rgba(208, 212, 216, 0.359);
         background-color: white;
-        margin-bottom: 0px;
         overflow-x: scroll;
         white-space: nowrap;
 
         thead {
             background-color: $primary;
+            position: sticky;
+            top: 0;
 
             tr.table-title {
                 background-color: #EBEBEB;
@@ -309,6 +283,16 @@
 
     }
 
+    .pagination-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media-breakpoint-down(sm){
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
 }
 
 //when menu its close

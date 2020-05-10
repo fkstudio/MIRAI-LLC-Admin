@@ -30756,32 +30756,6 @@ a.text-muted:hover {
   margin-bottom: 0px;
 }
 
-.filter-id {
-  margin-top: 10px;
-}
-
-.filter-id form .row {
-  margin-left: 0px;
-  margin-right: 0px;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.filter-id form label {
-  color: #174A84;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  min-width: 140px;
-  margin-bottom: 0px;
-}
-
-.filter-id form .form-control {
-  text-align: center;
-  height: auto;
-  padding: 0px;
-}
-
 .filter-users {
   display: -ms-flexbox;
   display: flex;
@@ -30812,13 +30786,13 @@ a.text-muted:hover {
 }
 
 .filter-users .show-rows .form-group .form-control {
-  width: 45px;
+  width: 50px;
   height: 25px;
-  background-color: #000000;
-  opacity: 30%;
+  background-color: #B3B3B3;
   color: white;
   text-align: center;
   border: 0px;
+  padding: 0px;
 }
 
 .filter-users .action-user {
@@ -30856,7 +30830,6 @@ a.text-muted:hover {
 }
 
 .users-table {
-  border: 1px solid rgba(208, 212, 216, 0.359);
   position: relative;
   overflow: auto;
   width: 100%;
@@ -30866,14 +30839,17 @@ a.text-muted:hover {
 .users-table table.table {
   width: 100%;
   position: relative;
+  border: 1px solid rgba(208, 212, 216, 0.359);
   background-color: white;
-  margin-bottom: 0px;
   overflow-x: scroll;
   white-space: nowrap;
 }
 
 .users-table table.table thead {
   background-color: #174A84;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .users-table table.table thead tr.table-title {
@@ -31069,6 +31045,24 @@ a.text-muted:hover {
 
 .users-table table.table tr {
   white-space: initial;
+}
+
+.users-table .pagination-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .users-table .pagination-wrap {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .sidebar-collapse .main-sidebar .sidebar {
