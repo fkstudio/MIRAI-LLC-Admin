@@ -31,7 +31,7 @@
         color: $primary;
         font-size: 28px;
         font-family: 'Lato', sans-serif;
-        font-weight: 900;
+        font-weight: 600;
         margin-bottom: 0px;
     }
 }
@@ -109,7 +109,7 @@
         padding-bottom: 3px;
 
         a.btn {
-            padding: 0;
+            // padding: 0;
             width: 45px;
             height: 25px;
             display: flex;
@@ -117,13 +117,14 @@
             justify-content: center;
             
             i {
-                font-size: 16px;
-                margin-left: 4px;
+                font-size: 14px;
             }
         }
 
         a:nth-child(1) {
+            background-color: $primary;
             margin-right: 10px;
+            color: white;
         }
     }
 }
@@ -133,13 +134,11 @@
 }
 
 .users-table {
-    margin-top: 15px;
-    // padding-bottom: 15px;
     border: 1px solid rgba(208, 212, 216, 0.359);
     position: relative;
     overflow: auto;
     width: 100%;
-
+    margin-top: 25px;
 
     table.table {
         width: 100%;
@@ -176,6 +175,28 @@
 
             }
 
+            input {
+                background-color: $primary;
+                color: white;
+                border: 0;
+                cursor: pointer;
+
+                &::placeholder {
+                    color: white;
+                    color: white;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+
+                &:focus {
+                    background-color: white;
+                    color: black;
+
+                    &::placeholder {
+                        color: black;
+                    }
+                }
+            }
         }
 
         tbody {
@@ -194,9 +215,92 @@
         th, td {
             padding: 5px;
             min-width: 130px;
-            max-width: 200px;
+            // max-width: 200px;
             font-family: 'Lato', sans-serif;
             font-size: 14px;
+        }
+
+        th:first-child {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        td:first-child {
+            label.radio {
+                margin-bottom: 0px;
+            }
+
+            .radio {
+                display: block;
+                cursor: pointer;
+                margin-bottom: 5px;
+                margin-top: 0px;
+
+                input {
+                    display: none;
+                    & + span {
+                        padding-left: 35px;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        color: #000000;
+                        font-size: 14px;
+                        font-weight: 500;
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            width: 30px;
+                            height: 30px;
+                            display: block;
+                            border-radius: 3px;
+                            top: 3px;
+                            left: 20px;
+                            position: absolute;
+                        }
+
+                        //cuadro
+                        &:before {
+                            content: "\f0c8";
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 15px;
+                        }
+                        //cuando selecciona
+                        &:after {
+                            display: none;
+                            color: green;
+                            content: "\f14a";
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 15px;
+                        }
+                    }
+                    //seleccionado
+                    &:checked + span {
+            
+                        &:before {
+                            display: none;
+                        }
+            
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                margin-left: 70px;
+                width: 45px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 14px;
+                    color: white;
+                }
+            }
         }
 
         tr {
@@ -205,27 +309,6 @@
 
     }
 
-    .consignee-table {
-        table.table {
-            border: 0px;
-
-            thead {
-                th:nth-child(2) {
-                    width: 250px;
-                }
-            }
-
-            tbody {
-                td:nth-child(2) {
-                    width: 250px;
-                }
-            }
-        }
-
-        @include media-breakpoint-down(md) {
-            margin-bottom: 10px;
-        }
-    }
 }
 
 //when menu its close
