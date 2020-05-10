@@ -108,7 +108,7 @@
 .users-table {
     // border: 1px solid rgba(208, 212, 216, 0.359);
     position: relative;
-    overflow: auto;
+    overflow-x: scroll;
     width: 100%;
     margin-top: 25px;
 
@@ -117,8 +117,10 @@
         position: relative;
         border: 1px solid rgba(208, 212, 216, 0.359);
         background-color: white;
-        overflow-x: scroll;
+        // overflow-x: scroll;
+        overflow: hidden;
         white-space: nowrap;
+        margin-bottom: 0px;
 
         thead {
             background-color: $primary;
@@ -280,18 +282,19 @@
         tr {
             white-space: initial;
         }
-
     }
+}
 
-    .pagination-wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.pagination-wrap {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        @include media-breakpoint-down(sm){
-            flex-direction: column;
-            justify-content: center;
-        }
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
