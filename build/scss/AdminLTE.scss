@@ -1,0 +1,348 @@
+/*!
+ *   AdminLTE v3.0.4
+ *   Author: Colorlib
+ *   Website: AdminLTE.io <http://adminlte.io>
+ *   License: Open source - MIT <http://opensource.org/licenses/MIT>
+ */
+// Bootstrap
+// ---------------------------------------------------
+@import '~bootstrap/scss/functions';
+@import 'bootstrap-variables';
+@import '~bootstrap/scss/bootstrap';
+
+// Variables and Mixins
+// ---------------------------------------------------
+@import 'variables';
+@import 'mixins';
+
+@import 'parts/core';
+@import 'parts/components';
+@import 'parts/extra-components';
+@import 'parts/pages';
+@import 'parts/plugins';
+@import 'parts/miscellaneous';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+//components
+.section-title {
+
+    h2 {
+        color: $primary;
+        font-size: 28px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+}
+
+.filter-users {
+    display: flex;
+    align-items: center;
+
+    .show-rows {
+
+        .form-group {
+            display: flex;
+            margin-bottom: 0px;
+
+            label {
+                margin-bottom: 0px;
+                font-family: 'Lato', sans-serif;
+                font-size: 19px;
+                color: #918484;
+                font-weight: 400;
+            }
+
+            label:nth-child(1) {
+                margin-right: 4px;
+            }
+
+            label:nth-child(3) {
+                margin-left: 4px;
+            }
+
+            .form-control {
+                width: 50px;
+                height: 25px;
+                background-color: #B3B3B3;
+                color: white;
+                text-align: center;
+                border: 0px;
+                padding: 0px;
+            }
+        }
+    }
+
+    .action-user {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 3px;
+
+        a.btn {
+            // padding: 0;
+            width: 45px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            i {
+                font-size: 14px;
+            }
+        }
+
+        a:nth-child(1) {
+            background-color: $primary;
+            margin-right: 10px;
+            color: white;
+        }
+    }
+}
+
+.content-wrapper {
+    background-color: white;
+}
+
+.users-table {
+    // border: 1px solid rgba(208, 212, 216, 0.359);
+    position: relative;
+    overflow-x: scroll;
+    width: 100%;
+    margin-top: 25px;
+
+    table.table {
+        width: 100%;
+        position: relative;
+        border: 1px solid rgba(208, 212, 216, 0.359);
+        background-color: white;
+        // overflow-x: scroll;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-bottom: 0px;
+
+        thead {
+            background-color: $primary;
+            position: sticky;
+            top: 0;
+
+            tr.table-title {
+                background-color: #EBEBEB;
+
+                th {
+                    color: $primary;
+                    font-size: 14px;
+                    font-family: 'Lato', sans-serif;
+                }
+            }
+
+            tr {
+                border: 0px;
+                // height: 35px;
+
+                th {
+                    color: white;
+                    font-weight: bold;
+                    border: 0px;
+                    vertical-align: middle;
+                    text-transform: capitalize;
+                }
+
+            }
+
+            input {
+                background-color: $primary;
+                color: white;
+                border: 0;
+                cursor: pointer;
+
+                &::placeholder {
+                    color: white;
+                    color: white;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+
+                &:focus {
+                    background-color: white;
+                    color: black;
+
+                    &::placeholder {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        tbody {
+
+            td {
+                border: 1px solid #A5C9FF;
+                vertical-align: middle;
+            }
+            
+            @include media-breakpoint-down(md) {
+                height: 250px;
+            }
+
+        }
+
+        th, td {
+            padding: 5px;
+            min-width: 130px;
+            // max-width: 200px;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+        }
+
+        th:first-child {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        td:first-child {
+            label.radio {
+                margin-bottom: 0px;
+            }
+
+            .radio {
+                display: block;
+                cursor: pointer;
+                margin-bottom: 5px;
+                margin-top: 0px;
+
+                input {
+                    display: none;
+                    & + span {
+                        padding-left: 35px;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        color: #000000;
+                        font-size: 14px;
+                        font-weight: 500;
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            width: 30px;
+                            height: 30px;
+                            display: block;
+                            border-radius: 3px;
+                            top: 3px;
+                            left: 20px;
+                            position: absolute;
+                        }
+
+                        //cuadro
+                        &:before {
+                            content: "\f0c8";
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 15px;
+                        }
+                        //cuando selecciona
+                        &:after {
+                            display: none;
+                            color: green;
+                            content: "\f14a";
+                            font-family: "Font Awesome 5 Free";
+                            font-size: 15px;
+                        }
+                    }
+                    //seleccionado
+                    &:checked + span {
+            
+                        &:before {
+                            display: none;
+                        }
+            
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                margin-left: 70px;
+                width: 45px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    font-size: 14px;
+                    color: white;
+                }
+            }
+        }
+
+        tr {
+            white-space: initial;
+        }
+    }
+}
+
+.pagination-wrap {
+    margin-top: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+//when menu its close
+.sidebar-collapse {
+    .main-sidebar {
+        .sidebar {
+            padding-right: 0px;
+            .nav-sidebar {
+                .nav-item > .nav-link {
+                    justify-content: center;
+                    padding-left: 0;
+                    p {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &:hover,&.sidebar-focused {
+            .sidebar {
+                .nav-sidebar {
+                    .nav-item > .nav-link {
+                        justify-content: flex-start;
+                        padding-left: 10px;
+
+                        p {
+                            display: block;
+                        }
+                        
+                    }
+
+                    // Tree view menu
+                    .nav-treeview {
+                        > .nav-item {
+                        > .nav-link {
+                            padding-left: 38px;
+                            font-size: 12px;
+                            height: 40px;
+                            > .nav-icon {
+                            width: $sidebar-nav-icon-width;
+                            }
+                        }
+                        }
+                    }
+                }
+    
+            }
+        }
+    }
+}

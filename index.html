@@ -1,116 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!-- cdn -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <!-- end cdn -->
-    <meta charset="UTF-8">
-    <meta name="description" content="MIRAI LLC">
-    <meta name="keywords" content="mirai admin, admin">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>MIRAI LLC Admin</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
-<body>
-    <main id="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-4 p-md-0 p-sm-0">
-                    <aside class="side-nav">
-                        <figure class="logo">
-                            <img src="img/logo.png" alt="MIRAI LLC logo" class="img-fluid">
-                        </figure>
-                        <div class="user-admin">
-                            <h2 class="position-admin">General Manager</h2>
-                            <p class="user-name-admin">Eleuterio Reyes</p>
-                        </div>
-                        <h3 class="dashboad-title"><i class="fas icon-dashboard"></i>Dashboard</h3>
-                        <ul class="main-menu">
-                            <li>
-                                <a href="#"><i class="fas far fa-question-circle"></i>CUSTOMER INFORMATION<i class="fas fa-chevron-right"></i></a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li><a href="#">Clientes</a></li>
-                                        <li><a href="#">Clients Balance</a></li>
-                                        <li><a href="#">Clients Bank-Info</a></li>
-                                        <li><a href="#">Consignee</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-car"></i>Car details<i class="fas fa-chevron-right"></i></a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li><a href="#">Car Deal (car purchases)</a></li>
-                                        <li><a href="#">Car logistic</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-truck-loading"></i>TRANSPORTATION<i class="fas fa-chevron-right"></i></a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li><a href="#">Auc Docs</a></li>
-                                        <li><a href="#">Transportation</a></li>
-                                        <li><a href="#">Shipping info</a></li>
-                                        <li><a href="#">Courier (DHL/EMS/Fedex)</a></li>
-                                        <li><a href="#">Auction names</a></li>
-                                        <li><a href="#">Yard Name and location</a></li>
-                                        <li><a href="#">Inspection companies</a></li>
-                                        <li><a href="#">Insurance company for CIF</a></li>
-                                        <li><a href="#">Transportation costs by company</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-certificate"></i>Export Certificate<i class="fas fa-chevron-right"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-money-check-alt"></i>Finance information<i class="fas fa-chevron-right"></i></a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li><a href="#">Company Bank info</a></li>
-                                        <li><a href="#">Expense management</a></li>
-                                        <li><a href="#">Income management</a></li>
-                                        <li><a href="#">Office expense (Petty Cash)</a></li>
-                                        <li><a href="#">Business report</a></li>
-                                        <li><a href="#">LC (Letter of Credit)</a></li>
-                                        <li><a href="#">Remittances-deposit</a></li>
-                                        <li><a href="#">Refund to clients</a></li>
-                                        <li><a href="#">Sales commission</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas icon-classfier"></i>Classifier<i class="fas fa-chevron-right"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas icon-ledger"></i>LEDGER ENTRIES<i class="fas fa-chevron-right"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fas fa-user-circle"></i>ACCESS ROLES<i class="fas fa-chevron-right"></i></a>
-                                <div class="sub-menu">
-                                    <ul>
-                                        <li><a href="#">User</a></li>
-                                        <li><a href="#">User Access</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </aside>
+<body class="hold-transition sidebar-mini layout-fixed">
+    <main class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light pl-5">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index.html" class="nav-link">Dashboard</a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel-->
+                <div class="user-panel pb-3 d-flex flex-column">
+                    <div class="image">
+                        <img src="dist/img/logo.png" alt="logo mirai">
+                    </div>
+                    <div class="info">
+                        <h4 class="work-position">General Manager</h4>
+                        <a href="#" class="user-admin">Alexander Pierce</a>
+                    </div>
                 </div>
-                <div class="col-xl-9 col-lg-8 col-md-8 p-sm-0">
-                    <section class="main">
-                        <div class="container">
-                            <h3 class="title-dashboard">Dashboard</h3>
-                        </div>
-                    </section>
-                </div>
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                        <li class="nav-item has-treeview">
+                            <a href="index.html" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>Dashboard<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas far fa-question-circle"></i>
+                                <p>Customer information<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/pages/clients/clients.html" class="nav-link active"><p>Clientes</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Clients Balances</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Clients Bank-Info</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Consignee</p></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-car"></i>
+                                <p>Car details<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Car Deal</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Car logistic</p></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-shuttle-van"></i>
+                                <p>Transportation<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Auc Docs</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Transportation</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Shipping info</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Courier (DHL/EMS/Fedex)</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Auction names</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Yard Name and location</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Inspection companies</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Insurance company for CIF</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Transportation costs by company</p></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-certificate"></i>
+                                <p>Export Certificate<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-certificate"></i>
+                                <p>FINANCIAL INFORMATION<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Company Bank info</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Expense management</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Income management</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Office expense (Petty Cash)</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Business report</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Remittances-deposit</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Refund to clients</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>Sales commission</p></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas icon-ledger"></i>
+                                <p>Letter of credit<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-user-circle"></i>
+                                <p>Classifier<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-user-circle"></i>
+                                <p>Ledger Entries<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-user-circle"></i>
+                                <p>ACCESS ROLES<i class="right fas fa-angle-right"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>User</p></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active"><p>User Access</p></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper pl-5">
+            <!-- Main content -->
+            <section class="content pt-5">
+                <div class="container-fluid">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>150</h3>
+
+                                    <p>New Orders</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-bag"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                                    <p>Bounce Rate</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-stats-bars"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3>44</h3>
+
+                                    <p>User Registrations</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-person-add"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3>65</h3>
+
+                                    <p>Unique Visitors</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pie-graph"></i>
+                                </div>
+                                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </section>
+            <!-- /.content -->
         </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2019-2020.</strong>
+        </footer>
     </main>
-    <script src="js/main.js"></script>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>$.widget.bridge('uibutton', $.ui.button);</script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
 </body>
 </html>
