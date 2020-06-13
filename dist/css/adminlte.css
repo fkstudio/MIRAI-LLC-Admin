@@ -30848,9 +30848,6 @@ a.text-muted:hover {
 
 .users-table table.table thead {
   background-color: #174A84;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
 
 .users-table table.table thead tr.table-title {
@@ -30955,7 +30952,6 @@ a.text-muted:hover {
 
 .users-table table.table th, .users-table table.table td {
   padding: 5px;
-  min-width: 130px;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
 }
@@ -31042,10 +31038,6 @@ a.text-muted:hover {
 .users-table table.table td:first-child .btn i {
   font-size: 14px;
   color: white;
-}
-
-.users-table table.table tr {
-  white-space: initial;
 }
 
 .pagination-wrap {
