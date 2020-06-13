@@ -117,15 +117,12 @@
         position: relative;
         border: 1px solid rgba(208, 212, 216, 0.359);
         background-color: white;
-        // overflow-x: scroll;
         overflow: hidden;
         white-space: nowrap;
         margin-bottom: 0px;
 
         thead {
             background-color: $primary;
-            position: sticky;
-            top: 0;
 
             tr.table-title {
                 background-color: #EBEBEB;
@@ -190,7 +187,7 @@
 
         th, td {
             padding: 5px;
-            min-width: 130px;
+            // min-width: 130px;
             // max-width: 200px;
             font-family: 'Lato', sans-serif;
             font-size: 14px;
@@ -277,10 +274,6 @@
                     color: white;
                 }
             }
-        }
-
-        tr {
-            white-space: initial;
         }
     }
 }
